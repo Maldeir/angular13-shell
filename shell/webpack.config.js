@@ -4,7 +4,7 @@ module.exports = withModuleFederationPlugin({
 
   //Modification: change the alias and url
   remotes: {
-    "comp": "http://localhost:4201/remoteEntry.js",    
+    "comps": "http://localhost:4201/remoteEntry.js",    
   },
 
   shared: {
