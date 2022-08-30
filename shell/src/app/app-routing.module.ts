@@ -5,13 +5,18 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 //MODIFICATION: ADD ROUTE
 const routes: Routes = [
   {
-    path: 'comp',
-    loadChildren: () => loadRemoteModule({
+    path: '',
+    loadChildren: () =>
+      loadRemoteModule({
       type: 'module',
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
       exposedModule: './routes',
-    }).then((m) => m.AppRoutingModule),
+    }).then((m) => m.BASE_ROUTES),
   },
+  // {
+  //   path: 'booking',
+  //   loadChildren: () => import('comp/routes').then(m => m.BASE_ROUTES)
+  // },
 ];
 
 @NgModule({

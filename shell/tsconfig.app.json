@@ -11,7 +11,5 @@
   ],
   "include": [
     "src/**/*.d.ts",
-    "src/*.d.ts",
-    "src/decl.d.ts"
   ]
 }
