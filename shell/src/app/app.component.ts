@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigLibService, Configs } from 'config-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shell';
+  constructor(configLibService: ConfigLibService) {
+    const config = new Configs({app: {domain: 'demo', port: 'itworked'}})
+     configLibService.write(config);
+  }
 }

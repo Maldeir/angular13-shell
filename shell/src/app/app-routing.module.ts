@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { HeaderComponent } from './header/header.component';
-
+import { environment } from '../environments/environment';
 //MODIFICATION: ADD ROUTE
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
     loadChildren: () =>
       loadRemoteModule({
       type: 'module',
-      remoteEntry: 'http://localhost:4201/remoteEntry.js',
+      remoteEntry: environment.component.url,
       exposedModule: './Module',
     }).then((m) => m.BaseCompModule)
   },

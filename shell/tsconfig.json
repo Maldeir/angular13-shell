@@ -20,7 +20,11 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "testType/*": ["../../angular13-comp/test-def/*"]
+    },
+    "typeRoots": ["../../angular13-comp/test-def/*.d.ts"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  app: {
+    domain: 'http://remote',
+    port: '80'
+  },
+  header: {
+    url: 'http://localhost:82/remoteEntry.js',
+  },
+  component: {
+    url: 'http://localhost:82/remoteEntry.js',
+  }
 };
 
 /*
