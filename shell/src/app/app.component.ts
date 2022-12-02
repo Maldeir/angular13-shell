@@ -11,5 +11,9 @@ export class AppComponent {
   constructor(configLibService: ConfigLibService) {
     const config = new Configs({app: {domain: 'demo', port: 'itworked'}})
      configLibService.write(config);
+
+    configLibService.configUpdateEmitter.subscribe((data: any) => {
+      console.log('I am the shell I have new config data: ', data);
+    });
   }
 }

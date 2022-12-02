@@ -12,7 +12,7 @@ export const environment = {
     url: 'http://localhost:82/remoteEntry.js',
   },
   component: {
-    url: 'http://localhost:82/remoteEntry.js',
+    url: 'http://localhost:4201/remoteEntry.js',
   }
 };
 
